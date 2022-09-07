@@ -43,11 +43,11 @@ class HomeFragment : Fragment() {
                     binding.swipeRefresh.isRefreshing = true
                 }
                 Status.SUCCESS -> {
-                    adapter.setCardList(emptyList())
+                    adapter.setUserList(emptyList())
                     binding.recyclerView.adapter = adapter
                     binding.swipeRefresh.isRefreshing = false
                     it.data?.let { data ->
-                        adapter.setCardList(data)
+                        adapter.setUserList(data)
                     }
                 }
                 Status.ERROR -> {

@@ -28,10 +28,10 @@ class HomeFragmentViewModel @Inject constructor(
         viewModelScope.launch {
             _userResponse.value = (Resource.loading(null))
             supervisorScope {
-                val cardResponseAsync =
+                val userResponseAsync =
                     async { userApiRepository.getUsers() }
                 try {
-                    _userResponse.value = (Resource.success(cardResponseAsync.await()))
+                    _userResponse.value = (Resource.success(userResponseAsync.await()))
                 } catch (e: Exception) {
                     _userResponse.value = (Resource.error(e.toString(), null))
                 }

@@ -19,7 +19,7 @@ class UserAdapter :
 
     private var userList = emptyList<UserResponse>()
 
-    fun setCardList(userList: List<UserResponse>) {
+    fun setUserList(userList: List<UserResponse>) {
         val diffCallBack = MyDiffCallBack(this.userList, userList)
         val diffResult = DiffUtil.calculateDiff(diffCallBack)
         diffResult.dispatchUpdatesTo(this)
