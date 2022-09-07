@@ -55,7 +55,7 @@ class HomeFragment : Fragment() {
                     if (!networkHelper.isNetworkConnected()) {
                         showToast("Check your network connection",requireContext())
                     } else {
-                        Toast.makeText(requireContext(), "${it.message}", Toast.LENGTH_SHORT).show()
+                        showToast(it.message.toString(),requireContext())
                     }
                 }
             }
