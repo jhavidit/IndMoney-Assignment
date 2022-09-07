@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">IndMoney Assignment</string>
+    <string name="user_image">user image</string>
+    <string name="name">Name</string>
+    <string name="title">Title</string>
+    <string name="contact">Contact</string>
+    <string name="description">Description</string>
+</resources>
